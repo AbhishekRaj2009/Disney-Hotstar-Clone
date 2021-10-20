@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #0c111b;
+}
+
+body {
+  width: 100%;
+  background-color: #0c111b;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 4%;
+  background: #0c111b; 
+  z-index: 20;
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-links {
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+}
+
+.flex{
+  display: flex;
+}
+
+.hamburger{
+  padding-right: 10px;
+  margin-top: 5px;
+}
+.ham-content{
+ z-index: 20;
+ color: #fff;
+ position: fixed;
+ top: 60px;
+ left: 30px;
+ background-color: #000;
+ padding: 20px;
+ visibility: hidden;
+}
+
+.hamburger:hover .ham-content{
+  cursor: pointer;
+  visibility: visible;
+  animation: roll-in 0.2s;
+  
+}
+.hamburger:hover i{
+  background: transparent;
+  cursor: pointer;
+}
+.ham-content ul li a:hover{
+  color: grey;
+}
+
+.ham-content ul{
+  background: transparent;
+}
+.ham-content li a{
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  background: transparent; 
+ 
+}
+.ham-content li{
+  list-style: none;
+  margin-bottom: 5px;
+  background: transparent;
+}
+
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 19px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: #fff;
+  text-transform: capitalize;
+  z-index: 0.9;
+  font-family: "Roboto", sans-serif;
+}
+
+.nabarRight {
+  display: block;
+  margin-left: auto;
+}
+
+.search-box {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #aaa;
+  color: #fff;
+  background: none;
+  height: 30px;
+  width: 250px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  transition: 0.5s;
+  font-weight: 500;
+}
+
+.search-box:focus {
+  width: 400px;
+  border-color: #1f80e0;
+}
+
+.sub-btn {
+  background: #1f80e0;
+  color: #fff;
+  border-radius: 5px;
+  height: 30px;
+  padding: 0 20px;
+  font-size: 12px;
+  margin: 0 10px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.login-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.9;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  padding: 20px 0;
+  overflow-x: hidden;
+  margin-top: 80px;
+}
+
+.carousel {
+  display: flex;
+  width: 92%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  background: #0c111b;
+}
+
+.slider {
+  flex: 0 0 auto;
+  margin-right: 30px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 70%;
+  min-height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+}
+
+.slide-content {
+  position: absolute;
+  color: #fff;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(to right, #030b17 80%, #0c111b00);
+}
+
+.movie-title {
+  padding-left: 50px;
+  margin-top: 80px;
+  text-transform: capitalize;
+  width: 70% ;
+  background: transparent;
+}
+
+.movie-des {
+  width: 80%;
+  line-height: 30px;
+  padding-left: 50px;
+  margin-top: 30px;
+  opacity: 0.8;
+  background: transparent;
+
+}
+
+.video-container {
+  position: relative;
+  width: 92%;
+  margin: auto;
+  height: 10vw;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.video-card{
+  position: relative;
+  min-width: calc(100%/5-10px);
+  width: calc(100%/5 - 10px);
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #030b17;
+
+}
+
+.video-card-image , .card-video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-video {
+  position: absolute;
+}
+
+.video-card:hover .video-card-image {
+  display: none;
+}
+
+.title{
+  color: #fff;
+  opacity: 0.9;
+  padding-left: 4%;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 500;
+  width: fit-content;
+
+}
+
+.title:hover {
+  cursor: pointer;
+  color: #1f80e0 ;
+}
+
+.movies-list{
+  width: 100%;
+  height: 220px;
+  position: relative;
+  margin: 10px 8px 20px;
+}
+
+.card-container{
+  position: absolute;
+  width: 92%;
+  padding-left: 10px;
+  height: 220px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+}
+
+.card-container::-webkit-scrollbar{
+  display: none;
+}
+
+.card{
+  position: relative;
+  min-width: 150px;
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 10px;
+  transition: .5s;
+  background: #000;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+.card:hover .card-body{
+  opacity: 1;
+}
+
+.card-body {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(4,8,15,0) ,#192133 96%);
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.name {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 60%;
+  background: transparent;
+}
+
+.des{
+  color: #fff;
+  opacity: 0.8;
+  margin: 5px 0;
+  font-weight: 500;
+  font-size: 12px;
+  background: transparent;
+
+}
+
+.watchlist-btn{
+  position: relative;
+  width: 100%;
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  font-weight: 500;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 5px 0;
+  cursor: pointer;
+  padding: 10px 5px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+.watchlist-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  height: 35px;
+  width: 35px;
+  background-image: url('images/add.png');
+  background-size: cover;
+  transform: scale(0.4);
+}
+
+.watchlist-btn:hover{
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pre-btn , .nxt-btn {
+  position: absolute;
+  top: 0;
+  width: 5%;
+  height: 100%;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.pre-btn{
+  right: 0;
+  background: linear-gradient(to right,#0c111b 0%,#0c111b00);
+}
+
+.nxt-btn {
+  right: 0;
+  background: linear-gradient(to left,#0c111b 0%,#0c111b00);
+}
+
+.pre-btn img ,
+.nxt-btn img {
+  width: 15px;
+  height: 20px; 
+  opacity: 0;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img{
+  opacity: 1;
+}
+
+.change {
+  position: relative;
+}
+
+.footer{
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer-left{
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+}
+
+.footer-left-top{
+  padding-top: 50px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 15px;
+}
+
+.footer-left-top li:hover{
+  cursor: pointer;
+  color: #1f80e0;
+}
+
+.footer-left-bottom {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 13px;
+  line-height: 20px;
+  font-family: "Roboto", sans-serif;
+  opacity: 0.9;
+}
+
+.content{
+  color: rgb(231, 228, 228);
+  text-decoration: none;
+  list-style: none;
+  padding: 8px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.footer-mid {
+  display: flex;
+  flex-direction: column;
+}
+
+.favicon-space{
+  margin: 14px;
+}
+.fa{
+  padding: 5px;
+}
+.fa:hover{
+  background: #1f80e0;
+}
+
+.footer-mid-content{
+  color: #fff;
+  padding-top: 50px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+
+.footer-rightt{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-right-top {
+  color: #fff;
+  padding-top: 50px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.download-button {
+  border: none ;
+  border-radius: 3px;
+  padding: 4px;
+  color: #fff;
+  width: 160px;
+  height: 60px;
+  font-size: 16px;
+  margin: 4px;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  background: #161b27;
+  text-decoration: none;
+  align-items: center;
+  opacity: 0.9;
+  
+}
+
+.download-button:hover {
+  background: #1f80e0;
+}
+
+.footer-right-bottom {
+  display: flex;
+  margin-right: 60px;
+}
+.footer-right-bottom button:hover{
+  cursor: pointer;
+}
+
+.download-store {
+  opacity: 0.9;
+}
+
+.play-store::before{
+  content: 'GET IT ON';
+  font-size: 10px;
+  display: flex;
+  opacity: 0.9;
+}
+.app-store::before{
+  content: 'DOWNLOAD ON THE';
+  font-size: 10px;
+  display: flex;
+  opacity: 0.9;
+
+}
+
+.button-flex  {
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  justify-content: space-around;
+  align-items: center;
+  padding:0.3px;
+}
+
+
+i, .fa , .download-store{
+  color: #fff;
+  padding: 2 5px;
+  background: transparent;
+  font-size: 25px;
+}
+
+.download-store p{
+  padding: px;
+  font-size: 20px;
+  background: transparent;
+}
+
+svg{
+  background: transparent;
+}
+
+@keyframes roll-in {
+  from{
+    height: 0;
+  }
+  to{
+    height: 100px;
+  }
+}
